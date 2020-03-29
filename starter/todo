@@ -1,0 +1,34 @@
+- Add event handler;
+- Get input values;
+- Add the new item to our data structure;
+- Add the new item to the UI;
+- Calculate budget;
+- Update the UI
+
+UI module:
+- Get input values;
+- Add the new item to the UI;
+- Update the UI
+
+Data module:
+- Add the new item to our data structure;
+- Calculate budget;
+
+Controller module:
+- Add event handler;
+
+
+
+
+- Add event handler;
+- Delete the item from our data structure;
+- Delete the item to te UI;
+- Re-calculate budget;
+- Update the UI
+
+
+- Calculate percentages
+- Update percentages in UI
+- Display the current month and year
+- Number formatting
+- Improve input field UX
