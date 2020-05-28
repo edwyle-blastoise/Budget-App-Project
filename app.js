@@ -1,7 +1,6 @@
 //BUDGET CONTROLLER
 const budgetController = (function() {
 
-    //функция-конструктор называется с большой буквы, чтобы выделить ее от остальных функций
     const Expense = function(id, descritpion, value) {
         this.id = id;
         this.description = descritpion;
@@ -95,10 +94,9 @@ const budgetController = (function() {
             calculateTotal('inc');
 
             //calculate the budget: income - expenses
-
             data.budget = data.totals.inc - data.totals.exp;
-            //calculate the percentage of income that we spent
 
+            //calculate the percentage of income that we spent
             if(data.totals.inc > 0) {
                 data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100)
             } else {
@@ -130,7 +128,7 @@ const budgetController = (function() {
                 return allPerc;
             },
 
-        //create the object?
+        //create the object
         getBudget: function() {
             return {
                 budget: data.budget,
@@ -150,7 +148,7 @@ const budgetController = (function() {
 //UI CONTROLLER
 const UIController = (function () {
 
-    //Создаем отдельный объект с именами классов, ведь если имена классов изменятся, их будет проще изменить здесь, чем менять во всем коде
+    //Создаем отдельный объект с именами классов (если имена классов изменятся, их будет проще изменить здесь, чем менять во всем коде)
     const DOMStrings = {
         inputType: '.add__type',
         inputDescription: '.add__description',
@@ -204,7 +202,7 @@ const UIController = (function () {
     return {
         getInput: function () {
             return {
-                type: document.querySelector(DOMStrings.inputType).value, //Will be either inc or exp
+                type: document.querySelector(DOMStrings.inputType).value,               //Will be either inc or exp
                 description: document.querySelector(DOMStrings.inputDescription).value,
                 value: parseFloat(document.querySelector(DOMStrings.inputValue).value),
             }
@@ -434,4 +432,4 @@ const controller = (function(budgetCtrl, UICtrl) {
 })(budgetController, UIController);
 
 
-controller.init()
+controller.init();
